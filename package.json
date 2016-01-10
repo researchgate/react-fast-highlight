@@ -1,0 +1,61 @@
+{
+  "name": "react-fast-highlight",
+  "version": "0.1.0",
+  "description": "A fast react component wrapper for highlight.js",
+  "main": "lib/index.js",
+  "scripts": {
+    "clean": "rimraf lib",
+    "build": "cross-env NODE_ENV=production babel src --out-dir lib",
+    "flow": "flow",
+    "lint": "eslint src",
+    "prepublish": "npm run flow && npm test && npm run clean && npm run build",
+    "test": "cross-env NODE_ENV=test mocha $(find src -path '*__tests__/*.js') --reporter progress --compilers js:babel-register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chili-labs/react-fast-highlight.git"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "react",
+    "component",
+    "highlight",
+    "syntax",
+    "highlightjs"
+  ],
+  "author": "Daniel Tschinder <daniel@tschinder.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chili-labs/react-fast-highlight/issues"
+  },
+  "homepage": "https://github.com/chili-labs/react-fast-highlight#readme",
+  "peerDependencies": {
+    "react": "^0.14.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.4.0",
+    "babel-eslint": "^5.0.0-beta6",
+    "babel-preset-es2015-loose": "^6.1.4",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-1": "^6.3.13",
+    "babel-register": "^6.3.13",
+    "chai": "^3.4.1",
+    "cross-env": "^1.0.7",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^3.1.0",
+    "eslint-plugin-react": "^3.14.0",
+    "flow-bin": "^0.20.1",
+    "jsdom": "^7.2.2",
+    "mocha": "^2.3.4",
+    "react": "^0.14.0",
+    "react-addons-test-utils": "^0.14.6",
+    "rimraf": "^2.5.0",
+    "sinon": "^1.17.2",
+    "sinon-chai": "^2.8.0"
+  },
+  "dependencies": {
+    "highlight.js": "^9.1.0"
+  }
+}
