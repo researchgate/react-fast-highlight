@@ -1,6 +1,6 @@
 {
   "name": "react-fast-highlight",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "A fast react component wrapper for highlight.js",
   "main": "lib/index.js",
   "scripts": {
