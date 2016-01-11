@@ -2,7 +2,8 @@
 
 import React, { Component } from 'react';
 import shallowCompare from 'react/lib/shallowCompare';
-import hjs from 'highlight.js';
+import hljs from 'highlight.js';
+import cx from 'classnames';
 
 type Props = {
   children: string,
@@ -12,12 +13,14 @@ type Props = {
 
 type State = {
   highlightedCode: ?string,
+  language: ?string,
 };
 
 export default class Highlight extends Component<void, Props, State> {
 
   state: State = {
     highlightedCode: null,
+    language: null,
   };
 
   componentDidMount() {
@@ -43,9 +46,11 @@ export default class Highlight extends Component<void, Props, State> {
 
     if (this.props.languages && this.props.languages.length === 1) {
       const language:string = this.props.languages[0];
-      callback = () => hjs.highlight(language, this.initialCode, true);
+      callback = (resolve: Function) =>
+        resolve(hljs.highlight(language, this.initialCode));
     } else {
-      callback = () => hjs.highlightAuto(this.initialCode, this.props.languages);
+      callback = (resolve: Function) =>
+        resolve(hljs.highlightAuto(this.initialCode, this.props.languages));
     }
 
     return callback;
@@ -55,17 +60,22 @@ export default class Highlight extends Component<void, Props, State> {
     const promise = new Promise(this.highlightCallback);
 
     promise
-      .then(result => this.setState({ highlightedCode: result.value }))
-      .catch(error => console.log(error));
+      .then(result => this.setState({ highlightedCode: result.value, language: result.language }))
+      .catch(error => console.error(error));
   }
 
   render(): ?ReactElement {
-    const code: string = this.state.highlightedCode || this.initialCode;
+    const code: ?string = this.state.highlightedCode;
+    const classes = cx(this.props.className, 'hljs', this.state.language);
 
-    return (
-      <pre>
-        <code className={this.props.className} dangerouslySetInnerHTML={{ __html: code }} />
-      </pre>
-    );
+    if (code) {
+      return (
+        <pre>
+          <code className={classes} dangerouslySetInnerHTML={{ __html: code }} />
+        </pre>
+      );
+    } else {
+      return <pre><code className={classes}>{this.initialCode}</code></pre>;
+    }
   }
 }
