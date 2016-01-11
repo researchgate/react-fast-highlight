@@ -2,13 +2,14 @@
 
 import React, { Component } from 'react';
 import shallowCompare from 'react/lib/shallowCompare';
-import hljs from 'highlight.js';
+import hljs from '../highlight.js';
 import cx from 'classnames';
 
 type Props = {
   children: string,
   className?: string,
   languages?: Array<string>,
+  worker?: Object
 };
 
 type State = {
@@ -57,25 +58,37 @@ export default class Highlight extends Component<void, Props, State> {
   }
 
   _highlightCode(): void {
-    const promise = new Promise(this.highlightCallback);
+    const worker = this.props.worker;
+    if (worker) {
+      worker.onmessage = event => this.setState({
+        highlightedCode: event.data.value,
+        language: event.data.language,
+      });
+      worker.postMessage({ code: this.initialCode, languages: this.props.languages });
+    } else {
+      const promise = new Promise(this.highlightCallback);
 
-    promise
-      .then(result => this.setState({ highlightedCode: result.value, language: result.language }))
-      .catch(error => console.error(error));
+      promise
+        .then(result => this.setState({ highlightedCode: result.value, language: result.language }))
+        .catch(error => console.error(error));
+    }
   }
 
   render(): ?ReactElement {
     const code: ?string = this.state.highlightedCode;
     const classes = cx(this.props.className, 'hljs', this.state.language);
 
+    let result: ReactElement;
     if (code) {
-      return (
+      result = (
         <pre>
           <code className={classes} dangerouslySetInnerHTML={{ __html: code }} />
         </pre>
       );
     } else {
-      return <pre><code className={classes}>{this.initialCode}</code></pre>;
+      result = <pre><code className={classes}>{this.initialCode}</code></pre>;
     }
+
+    return result;
   }
 }
