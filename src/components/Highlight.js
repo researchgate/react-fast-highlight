@@ -37,7 +37,12 @@ export default class Highlight extends Component<void, Props, State> {
   }
 
   // $FlowIssue - get/set properties not yet supported
-  get initialCode(): string {
+  get initialCode(): ?string {
+    const type = typeof this.props.children;
+    if (type !== 'string') {
+      throw new Error(`Children of <Highlight> must be a string. ${type} supplied`);
+    }
+
     return this.props.children;
   }
 
@@ -68,9 +73,9 @@ export default class Highlight extends Component<void, Props, State> {
     } else {
       const promise = new Promise(this.highlightCallback);
 
-      promise
-        .then(result => this.setState({ highlightedCode: result.value, language: result.language }))
-        .catch(error => console.error(error));
+      promise.then(
+        result => this.setState({ highlightedCode: result.value, language: result.language })
+      );
     }
   }
 
@@ -79,6 +84,7 @@ export default class Highlight extends Component<void, Props, State> {
     const classes = cx(this.props.className, 'hljs', this.state.language);
 
     let result: ReactElement;
+
     if (code) {
       result = (
         <pre>

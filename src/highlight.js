@@ -1,4 +1,4 @@
-var hljs = require('highlight.js/lib/highlight');
+const hljs = require('highlight.js/lib/highlight');
 
 hljs.registerLanguage('1c', require('highlight.js/lib/languages/1c'));
 hljs.registerLanguage('accesslog', require('highlight.js/lib/languages/accesslog'));
@@ -12,7 +12,7 @@ hljs.registerLanguage('asciidoc', require('highlight.js/lib/languages/asciidoc')
 hljs.registerLanguage('aspectj', require('highlight.js/lib/languages/aspectj'));
 hljs.registerLanguage('autohotkey', require('highlight.js/lib/languages/autohotkey'));
 // webpack currently can't handle this file
-//hljs.registerLanguage('autoit', require('highlight.js/lib/languages/autoit'));
+// hljs.registerLanguage('autoit', require('highlight.js/lib/languages/autoit'));
 hljs.registerLanguage('avrasm', require('highlight.js/lib/languages/avrasm'));
 hljs.registerLanguage('axapta', require('highlight.js/lib/languages/axapta'));
 hljs.registerLanguage('bash', require('highlight.js/lib/languages/bash'));

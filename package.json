@@ -4,11 +4,12 @@
   "description": "A fast react component wrapper for highlight.js",
   "main": "lib/index.js",
   "scripts": {
+    "check": "npm run lint && npm run flow && npm test",
     "clean": "rimraf lib",
     "build": "cross-env NODE_ENV=production babel src --out-dir lib",
     "flow": "flow",
     "lint": "eslint src",
-    "prepublish": "npm run flow && npm test && npm run clean && npm run build",
+    "prepublish": "npm run check && npm run clean && npm run build",
     "test": "cross-env NODE_ENV=test mocha $(find src -path '*__tests__/*.js') --reporter progress --compilers js:babel-register"
   },
   "repository": {
