@@ -40,7 +40,7 @@ export default class Highlight extends Component<void, Props, State> {
   get initialCode(): ?string {
     const type = typeof this.props.children;
     if (type !== 'string') {
-      throw new Error(`Children of <Highlight> must be a string. ${type} supplied`);
+      throw new Error(`Children of <Highlight> must be a string. '${type}' supplied`);
     }
 
     return this.props.children;

@@ -1,1 +1,2 @@
-export Highlight from './components/Highlight';
+import Highlight from './components/Highlight';
+export default Highlight;
