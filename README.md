@@ -69,6 +69,10 @@ class App extends React.Component {
 }
 ```
 
+## Known Issues
+
+* highlighting autoit is disable due to issues between webpack and highlight.js
+  * see https://github.com/isagalaev/highlight.js/issues/895
 
 ## License
 
