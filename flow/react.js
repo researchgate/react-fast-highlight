@@ -1,6 +1,8 @@
 /* @flow */
+//import type { Component } from 'react';
+// This does currently not work
 
-declare module 'react/lib/shallowCompare' {
+declare module 'react-addons-shallow-compare' {
   declare var exports:
-    (instance: ReactComponent, nextProps: ?Object, nextState: ?Object) => boolean;
+    (instance: Object, nextProps: ?Object, nextState: ?Object) => boolean;
 }
