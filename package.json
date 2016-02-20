@@ -48,7 +48,7 @@
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "^5.0.0",
     "eslint-plugin-react": "^3.15.0",
-    "flow-bin": "^0.21.0",
+    "flow-bin": "^0.22.0",
     "jsdom": "^8.0.2",
     "mocha": "^2.3.4",
     "react": "^0.14.0",
@@ -60,6 +60,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.3",
-    "highlight.js": "^9.1.0"
+    "highlight.js": "^9.1.0",
+    "react-addons-shallow-compare": "^0.14.7"
   }
 }

@@ -1,7 +1,7 @@
 /* @flow */
 
-import React, { Component } from 'react';
-import shallowCompare from 'react/lib/shallowCompare';
+import React, { Component, Element } from 'react';
+import shallowCompare from 'react-addons-shallow-compare';
 import hljs from '../highlight.js';
 import cx from 'classnames';
 
@@ -79,22 +79,18 @@ export default class Highlight extends Component<void, Props, State> {
     }
   }
 
-  render(): ?ReactElement {
+  render(): ?Element {
     const code: ?string = this.state.highlightedCode;
     const classes = cx(this.props.className, 'hljs', this.state.language);
 
-    let result: ReactElement;
-
     if (code) {
-      result = (
+      return (
         <pre>
           <code className={classes} dangerouslySetInnerHTML={{ __html: code }} />
         </pre>
       );
-    } else {
-      result = <pre><code className={classes}>{this.initialCode}</code></pre>;
     }
 
-    return result;
+    return <pre><code className={classes}>{this.initialCode}</code></pre>;
   }
 }
