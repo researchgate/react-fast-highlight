@@ -47,7 +47,7 @@
     "cross-env": "^1.0.7",
     "eslint": "^2.2.0",
     "eslint-config-airbnb": "^6.0.0",
-    "eslint-plugin-react": "^3.15.0",
+    "eslint-plugin-react": "^4.0.0",
     "flow-bin": "^0.22.0",
     "jsdom": "^8.0.2",
     "mocha": "^2.3.4",
