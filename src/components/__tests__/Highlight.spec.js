@@ -1,5 +1,5 @@
 /* global describe, it */
-/* eslint-disable no-unused-expressions */
+/* eslint-disable newline-per-chained-call */
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -17,7 +17,7 @@ describe('Highlight', () => {
         <Highlight>test</Highlight>
       );
 
-      expect(highlightAuto).to.have.been.calledOnce;
+      expect(highlightAuto).to.have.been.calledOnce();
       expect(highlightAuto).to.have.been.calledWith('test');
 
       highlightAuto.restore();
@@ -31,7 +31,7 @@ describe('Highlight', () => {
         <Highlight languages={['js']}>test</Highlight>
       );
 
-      expect(highlight).to.have.been.calledOnce;
+      expect(highlight).to.have.been.calledOnce();
       expect(highlight).to.have.been.calledWith('js', 'test');
 
       highlight.restore();
@@ -45,7 +45,7 @@ describe('Highlight', () => {
         <Highlight languages={['js', 'html']}>test</Highlight>
       );
 
-      expect(highlightAuto).to.have.been.calledOnce;
+      expect(highlightAuto).to.have.been.calledOnce();
       expect(highlightAuto).to.have.been.calledWith('test', ['js', 'html']);
 
       highlightAuto.restore();
@@ -58,6 +58,6 @@ describe('Highlight', () => {
     );
     const domElement = ReactDOM.findDOMNode(component);
 
-    expect(domElement.children[0].classList.contains('foobla')).to.equal.true;
+    expect(domElement.children[0].classList.contains('foobla')).to.be.true();
   });
 });
