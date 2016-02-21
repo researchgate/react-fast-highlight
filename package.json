@@ -11,7 +11,7 @@
     "lint": "eslint src",
     "precommit": "npm run check",
     "prepublish": "npm run check && npm run clean && npm run build",
-    "test": "cross-env NODE_ENV=test mocha $(find src -path '*__tests__/*.js') --reporter progress --compilers js:babel-register"
+    "test": "cross-env NODE_ENV=test mocha tests/setup.js $(find src -path '*__tests__/*.spec.js') --compilers js:babel-register"
   },
   "repository": {
     "type": "git",
