@@ -18,7 +18,7 @@ type State = {
 
 export default class Highlight extends Component {
 
-  prop: Props;
+  props: Props;
 
   state: State = {
     highlightedCode: null,
