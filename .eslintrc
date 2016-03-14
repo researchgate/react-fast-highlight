@@ -5,7 +5,6 @@
     "react/prop-types": 0
   },
   "globals": {
-    "HighlightResult": false,
-    "ReactElement": false
+    "HighlightResult": false
   }
 }

@@ -1,5 +1,4 @@
 /* @flow */
-
 import React, { Component, Element } from 'react';
 import shallowCompare from 'react-addons-shallow-compare';
 import hljs from '../highlight.js';
@@ -17,7 +16,9 @@ type State = {
   language: ?string,
 };
 
-export default class Highlight extends Component<void, Props, State> {
+export default class Highlight extends Component {
+
+  prop: Props;
 
   state: State = {
     highlightedCode: null,
