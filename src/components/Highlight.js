@@ -18,8 +18,6 @@ type State = {
 
 export default class Highlight extends Component {
 
-  props: Props;
-
   state: State = {
     highlightedCode: null,
     language: null,
@@ -36,6 +34,8 @@ export default class Highlight extends Component {
   componentDidUpdate() {
     this._highlightCode();
   }
+
+  props: Props;
 
   // $FlowIssue - get/set properties not yet supported
   get initialCode(): ?string {
