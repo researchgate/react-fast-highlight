@@ -55,7 +55,7 @@
     "jsdom": "^8.0.2",
     "mocha": "^2.3.4",
     "react": "^0.14.0",
-    "react-addons-test-utils": "^0.14.0",
+    "react-addons-test-utils": "^0.14.7",
     "react-dom": "^0.14.0",
     "rimraf": "^2.5.0",
     "sinon": "^1.17.2",
