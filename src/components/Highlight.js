@@ -1,5 +1,5 @@
 /* @flow */
-import React, { Component, Element } from 'react';
+import React, { Component, Element, PropTypes } from 'react';
 import shallowCompare from 'react-addons-shallow-compare';
 import hljs from '../highlight.js';
 import cx from 'classnames';
@@ -95,3 +95,10 @@ export default class Highlight extends Component {
     return <pre><code className={classes}>{this.initialCode}</code></pre>;
   }
 }
+
+Highlight.propTypes = {
+  children: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  languages: PropTypes.arrayOf(PropTypes.string),
+  worker: PropTypes.object,
+};
