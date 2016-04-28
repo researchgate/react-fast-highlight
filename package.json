@@ -10,7 +10,8 @@
     "flow": "flow",
     "lint": "eslint src",
     "precommit": "npm run check",
-    "prepublish": "npm run check && npm run clean && npm run build",
+    "prepublish": "npm run clean && npm run build",
+    "preversion": "npm run check",
     "test": "cross-env NODE_ENV=test mocha tests/setup.js $(find src -path '*__tests__/*.spec.js') --compilers js:babel-register"
   },
   "repository": {
