@@ -37,7 +37,6 @@ export default class Highlight extends Component {
 
   props: Props;
 
-  // $FlowIssue - get/set properties not yet supported
   get initialCode(): ?string {
     const type = typeof this.props.children;
     if (type !== 'string') {
@@ -47,16 +46,15 @@ export default class Highlight extends Component {
     return this.props.children;
   }
 
-  // $FlowIssue - get/set properties not yet supported
-  get highlightCallback(): () => HighlightResult {
+  get highlightCallback(): (resolve: Function) => HighlightResult {
     let callback;
 
     if (this.props.languages && this.props.languages.length === 1) {
       const language:string = this.props.languages[0];
-      callback = (resolve: Function) =>
+      callback = (resolve) =>
         resolve(hljs.highlight(language, this.initialCode));
     } else {
-      callback = (resolve: Function) =>
+      callback = (resolve) =>
         resolve(hljs.highlightAuto(this.initialCode, this.props.languages));
     }
 
