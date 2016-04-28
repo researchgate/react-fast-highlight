@@ -2,7 +2,7 @@
   "extends": "airbnb",
   "parser": "babel-eslint",
   "rules": {
-    "react/prop-types": 0
+    "no-underscore-dangle": 0
   },
   "globals": {
     "HighlightResult": false
