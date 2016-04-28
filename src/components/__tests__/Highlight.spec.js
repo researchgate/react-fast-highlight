@@ -1,21 +1,19 @@
 /* global describe, it */
-/* eslint-disable newline-per-chained-call */
-
 import React from 'react';
-import ReactDOM from 'react-dom';
-import TestUtils from 'react-addons-test-utils';
+import { shallow, mount } from 'enzyme';
 import Highlight from '../Highlight';
 import { expect } from 'chai';
 import hjs from 'highlight.js';
 import sinon from 'sinon';
+import jsdom from 'mocha-jsdom';
 
 describe('Highlight', () => {
+  jsdom();
+
   describe('no languages', () => {
     it('calls correct highlightCall', () => {
       const highlightAuto = sinon.spy(hjs, 'highlightAuto');
-      TestUtils.renderIntoDocument(
-        <Highlight>test</Highlight>
-      );
+      mount(<Highlight>test</Highlight>);
 
       expect(highlightAuto).to.have.been.calledOnce();
       expect(highlightAuto).to.have.been.calledWith('test');
@@ -27,9 +25,7 @@ describe('Highlight', () => {
   describe('one language', () => {
     it('calls correct highlightCall', () => {
       const highlight = sinon.spy(hjs, 'highlight');
-      TestUtils.renderIntoDocument(
-        <Highlight languages={['js']}>test</Highlight>
-      );
+      mount(<Highlight languages={['js']}>test</Highlight>);
 
       expect(highlight).to.have.been.calledOnce();
       expect(highlight).to.have.been.calledWith('js', 'test');
@@ -41,9 +37,7 @@ describe('Highlight', () => {
   describe('multiple languages', () => {
     it('calls correct highlightCall', () => {
       const highlightAuto = sinon.spy(hjs, 'highlightAuto');
-      TestUtils.renderIntoDocument(
-        <Highlight languages={['js', 'html']}>test</Highlight>
-      );
+      mount(<Highlight languages={['js', 'html']}>test</Highlight>);
 
       expect(highlightAuto).to.have.been.calledOnce();
       expect(highlightAuto).to.have.been.calledWith('test', ['js', 'html']);
@@ -53,11 +47,8 @@ describe('Highlight', () => {
   });
 
   it('className is passed through', () => {
-    const component = TestUtils.renderIntoDocument(
-      <Highlight className="foobla">test</Highlight>
-    );
-    const domElement = ReactDOM.findDOMNode(component);
+    const wrapper = shallow(<Highlight className="foobar">test</Highlight>);
 
-    expect(domElement.children[0].classList.contains('foobla')).to.be.true();
+    expect(wrapper.childAt(0).hasClass('foobar')).to.be.true();
   });
 });
