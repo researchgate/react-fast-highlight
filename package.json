@@ -56,7 +56,7 @@
     "eslint-plugin-react": "^5.0.0",
     "flow-bin": "^0.25.0",
     "husky": "^0.11.1",
-    "jsdom": "^8.0.2",
+    "jsdom": "^9.1.0",
     "mocha": "^2.3.4",
     "mocha-jsdom": "^1.1.0",
     "react": "^15.0.0",
