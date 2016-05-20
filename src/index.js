@@ -1,2 +1,2 @@
-import Highlight from './components/Highlight';
-export default Highlight;
+/* @flow */
+export { default as Highlight } from './components/Highlight';
