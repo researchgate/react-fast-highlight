@@ -1,14 +1,14 @@
 /* @flow */
 import React, { Component, Element, PropTypes } from 'react';
 import shallowCompare from 'react-addons-shallow-compare';
-import hljs from '../highlight.js';
+import hljs from 'highlight.js';
 import cx from 'classnames';
 
 type Props = {
   children: string,
   className?: string,
   languages?: Array<string>,
-  worker?: Object
+  worker?: Object,
 };
 
 type State = {
@@ -37,7 +37,7 @@ export default class Highlight extends Component {
 
   props: Props;
 
-  get initialCode(): ?string {
+  get initialCode(): string {
     const type = typeof this.props.children;
     if (type !== 'string') {
       throw new Error(`Children of <Highlight> must be a string. '${type}' supplied`);
