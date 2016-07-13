@@ -1,6 +1,8 @@
 # react-fast-highlight
 ###### A fast react component wrapper for highlight.js
 
+[![Join the chat at https://gitter.im/chili-labs/react-fast-highlight](https://badges.gitter.im/chili-labs/react-fast-highlight.svg)](https://gitter.im/chili-labs/react-fast-highlight?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Build Status](https://travis-ci.org/chili-labs/react-fast-highlight.svg?branch=master)](https://travis-ci.org/chili-labs/react-fast-highlight)
 [![Dependency Status](https://david-dm.org/chili-labs/react-fast-highlight.svg)](https://david-dm.org/chili-labs/react-fast-highlight)
 
