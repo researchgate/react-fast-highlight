@@ -46,7 +46,7 @@
     "babel-preset-stage-1": "^6.3.13",
     "babel-register": "^6.4.3",
     "chai": "^3.4.1",
-    "cross-env": "^1.0.7",
+    "cross-env": "^2.0.0",
     "dirty-chai": "^1.2.2",
     "enzyme": "^2.2.0",
     "eslint": "^2.4.0",
