@@ -69,6 +69,6 @@
   "dependencies": {
     "classnames": "^2.2.3",
     "highlight.js": "^9.0.0",
-    "react-addons-shallow-compare": "^15.0.0"
+    "react-addons-shallow-compare": "^15.1.0"
   }
 }
