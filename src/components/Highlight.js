@@ -1,6 +1,5 @@
 /* @flow */
-import React, { Component, Element, PropTypes } from 'react';
-import shallowCompare from 'react-addons-shallow-compare';
+import React, { PureComponent, PropTypes } from 'react';
 import hljs from 'highlight.js';
 import cx from 'classnames';
 
@@ -16,7 +15,7 @@ type State = {
   language: ?string,
 };
 
-export default class Highlight extends Component {
+export default class Highlight extends PureComponent {
 
   state: State = {
     highlightedCode: null,
@@ -27,17 +26,13 @@ export default class Highlight extends Component {
     this._highlightCode();
   }
 
-  shouldComponentUpdate(nextProps: Props, nextState: State): boolean {
-    return shallowCompare(this, nextProps, nextState);
-  }
-
   componentDidUpdate() {
     this._highlightCode();
   }
 
   props: Props;
 
-  get initialCode(): string {
+  getInitialCode() {
     const type = typeof this.props.children;
     if (type !== 'string') {
       throw new Error(`Children of <Highlight> must be a string. '${type}' supplied`);
@@ -46,31 +41,31 @@ export default class Highlight extends Component {
     return this.props.children;
   }
 
-  get highlightCallback(): (resolve: Function) => HighlightResult {
+  getHighlightCallback() {
     let callback;
 
     if (this.props.languages && this.props.languages.length === 1) {
       const language:string = this.props.languages[0];
-      callback = (resolve) =>
-        resolve(hljs.highlight(language, this.initialCode));
+      callback = (resolve: (x: *) => void) =>
+        resolve(hljs.highlight(language, this.getInitialCode()));
     } else {
-      callback = (resolve) =>
-        resolve(hljs.highlightAuto(this.initialCode, this.props.languages));
+      callback = (resolve: (x: *) => void) =>
+        resolve(hljs.highlightAuto(this.getInitialCode(), this.props.languages));
     }
 
     return callback;
   }
 
-  _highlightCode(): void {
+  _highlightCode() {
     const worker = this.props.worker;
     if (worker) {
       worker.onmessage = event => this.setState({
         highlightedCode: event.data.value,
         language: event.data.language,
       });
-      worker.postMessage({ code: this.initialCode, languages: this.props.languages });
+      worker.postMessage({ code: this.getInitialCode(), languages: this.props.languages });
     } else {
-      const promise = new Promise(this.highlightCallback);
+      const promise = new Promise(this.getHighlightCallback());
 
       promise.then(
         result => this.setState({ highlightedCode: result.value, language: result.language })
@@ -78,8 +73,8 @@ export default class Highlight extends Component {
     }
   }
 
-  render(): ?Element {
-    const code: ?string = this.state.highlightedCode;
+  render() {
+    const code = this.state.highlightedCode;
     const classes = cx(this.props.className, 'hljs', this.state.language);
 
     if (code) {
@@ -90,7 +85,7 @@ export default class Highlight extends Component {
       );
     }
 
-    return <pre><code className={classes}>{this.initialCode}</code></pre>;
+    return <pre><code className={classes}>{this.getInitialCode()}</code></pre>;
   }
 }
 

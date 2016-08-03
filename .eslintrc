@@ -2,7 +2,8 @@
   "extends": "airbnb",
   "parser": "babel-eslint",
   "rules": {
-    "no-underscore-dangle": 0
+    "no-underscore-dangle": 0,
+    "react/jsx-filename-extension": 0
   },
   "globals": {
     "HighlightResult": false

@@ -6,17 +6,17 @@
   "scripts": {
     "check": "npm run lint && npm run flow && npm test",
     "clean": "rimraf lib",
-    "build": "cross-env NODE_ENV=production babel src --out-dir lib --ignore __tests__",
+    "build": "babel src --out-dir lib",
     "flow": "flow",
     "lint": "eslint src",
     "precommit": "npm run check",
     "prepublish": "npm run clean && npm run build",
     "preversion": "npm run check",
-    "test": "cross-env NODE_ENV=test mocha tests/setup.js $(find src -path '*__tests__/*.spec.js') --compilers js:babel-register"
+    "test": "ava"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chili-labs/react-fast-highlight.git"
+    "url": "https://github.com/chili-labs/react-fast-highlight.git"
   },
   "files": [
     "lib"
@@ -35,19 +35,17 @@
   },
   "homepage": "https://github.com/chili-labs/react-fast-highlight#readme",
   "peerDependencies": {
-    "react": "^0.14.0 || ^15.0.0"
+    "react": "^15.3.0"
   },
   "devDependencies": {
+    "ava": "^0.15.2",
     "babel-cli": "^6.4.5",
-    "babel-eslint": "^6.0.0-beta",
+    "babel-eslint": "^6.0.0",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-es2015-loose": "^7.0.0",
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-1": "^6.3.13",
-    "babel-register": "^6.4.3",
-    "chai": "^3.4.1",
-    "cross-env": "^2.0.0",
-    "dirty-chai": "^1.2.2",
+    "babel-register": "^6.11.6",
     "enzyme": "^2.2.0",
     "eslint": "^3.0.0",
     "eslint-config-airbnb": "^10.0.0",
@@ -57,18 +55,21 @@
     "flow-bin": "^0.30.0",
     "husky": "^0.11.1",
     "jsdom": "^9.1.0",
-    "mocha": "^3.0.0",
-    "mocha-jsdom": "^1.1.0",
-    "react": "^15.0.0",
-    "react-addons-test-utils": "^15.0.0",
-    "react-dom": "^15.0.0",
+    "react": "^15.3.0",
+    "react-addons-test-utils": "^15.3.0",
+    "react-dom": "^15.3.0",
     "rimraf": "^2.5.0",
-    "sinon": "^1.17.2",
-    "sinon-chai": "^2.8.0"
+    "testdouble": "^1.6.0"
   },
   "dependencies": {
     "classnames": "^2.2.3",
-    "highlight.js": "^9.0.0",
-    "react-addons-shallow-compare": "^15.0.0"
+    "highlight.js": "^9.0.0"
+  },
+  "ava": {
+    "require": [
+      "babel-register",
+      "./test/helpers/setup-browser-env.js"
+    ],
+    "babel": "inherit"
   }
 }

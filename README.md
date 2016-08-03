@@ -3,6 +3,12 @@
 
 [![Build Status](https://travis-ci.org/chili-labs/react-fast-highlight.svg?branch=master)](https://travis-ci.org/chili-labs/react-fast-highlight)
 
+## Requirements
+  
+  Version 1.x works with React 0.14 and <=15.2
+  
+  Version 2.x works with React >=15.3
+
 ## Usage
 
 `npm install --save react-fast-highlight`

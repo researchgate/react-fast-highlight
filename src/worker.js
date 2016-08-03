@@ -1,7 +1,8 @@
 /* global postMessage, onmessage:true */
 /* @flow */
-
 import hjs from 'highlight.js';
+
+declare function postMessage(result: Object): void;
 
 onmessage = event => {
   const { code, languages } = event.data;
