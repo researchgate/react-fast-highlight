@@ -22,6 +22,8 @@ export default class Highlight extends PureComponent {
     language: null,
   };
 
+  props: Props;
+
   componentDidMount() {
     this._highlightCode();
   }
@@ -29,8 +31,6 @@ export default class Highlight extends PureComponent {
   componentDidUpdate() {
     this._highlightCode();
   }
-
-  props: Props;
 
   getInitialCode() {
     const type = typeof this.props.children;
