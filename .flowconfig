@@ -5,7 +5,6 @@
 [include]
 
 [libs]
-flow/
 
 [options]
 munge_underscores=true

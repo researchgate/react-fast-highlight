@@ -46,10 +46,10 @@ export default class Highlight extends PureComponent {
 
     if (this.props.languages && this.props.languages.length === 1) {
       const language:string = this.props.languages[0];
-      callback = (resolve: (x: *) => void) =>
+      callback = (resolve: (x: *) => void) => // eslint-disable-line arrow-parens
         resolve(hljs.highlight(language, this.getInitialCode()));
     } else {
-      callback = (resolve: (x: *) => void) =>
+      callback = (resolve: (x: *) => void) => // eslint-disable-line arrow-parens
         resolve(hljs.highlightAuto(this.getInitialCode(), this.props.languages));
     }
 
@@ -93,5 +93,5 @@ Highlight.propTypes = {
   children: PropTypes.string.isRequired,
   className: PropTypes.string,
   languages: PropTypes.arrayOf(PropTypes.string),
-  worker: PropTypes.object,
+  worker: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };

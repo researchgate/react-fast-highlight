@@ -8,5 +8,8 @@
   },
   "globals": {
     "HighlightResult": false
+  },
+  "env": {
+    "browser": true
   }
 }
