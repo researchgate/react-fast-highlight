@@ -57,7 +57,7 @@
     "jsdom": "^9.1.0",
     "react": "^15.3.0",
     "react-addons-test-utils": "^15.3.0",
-    "react-dom": "^15.3.0",
+    "react-dom": "^15.3.1",
     "rimraf": "^2.5.0",
     "testdouble": "^1.6.0"
   },
