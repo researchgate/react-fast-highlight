@@ -2,7 +2,7 @@ import React from 'react';
 import td from 'testdouble';
 import test from 'ava';
 import { mount, shallow } from 'enzyme';
-import BareHighlight from '../../src/components/BareHighlight';
+import BareHighlight from '../src/BareHighlight';
 
 test.cb('no language - calls correct highlightCall', (t) => {
   const hjs = td.replace('highlight.js');

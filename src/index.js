@@ -1,5 +1,4 @@
 /* @flow */
-import BareHighlight from './components/BareHighlight';
-import Highlight from './components/Highlight';
+import Highlight from './Highlight';
 
-export { BareHighlight, Highlight };
+export default Highlight;

@@ -21,7 +21,7 @@ or
 
 ```js
 import React, { Component } from 'react';
-import { Highlight } from 'react-fast-highlight';
+import Highlight from 'react-fast-highlight';
 
 class App extends Component {
 
@@ -66,9 +66,9 @@ A custom distribution might look like this
 import hljs from 'highlight.js/lib/highlight';
 
 // Lets only register javascript, scss, html/xml
-hljs.registerLanguage('scss', require('highlight.js/languages/scss'));
-hljs.registerLanguage('javascript', require('highlight.js/languages/javascript'));
-hljs.registerLanguage('xml', require('highlight.js/languages/xml'));
+hljs.registerLanguage('scss', require('highlight.js/lib/languages/scss'));
+hljs.registerLanguage('javascript', require('highlight.js/lib/languages/javascript'));
+hljs.registerLanguage('xml', require('highlight.js/lib/languages/xml'));
 
 export default hljs;
 ```
@@ -78,7 +78,7 @@ you can build your wrapper for highlighting code.
 
 ```js
 import React, { Component } from 'react';
-import { BareHighlight } from 'react-fast-highlight';
+import BareHighlight from 'react-fast-highlight/lib/BareHighlight';
 import hljs from './customhljs';
 
 class CustomHighlight extends Component {
@@ -93,7 +93,10 @@ class CustomHighlight extends Component {
 ```
 
 Now you can use this wrapper the same way as the default `Highlight` component with only support for
-certain languages.
+certain languages included.
+
+> In case you also want to use a webworker you should not use the supplied worker, as it includes all
+> languages. Instead you will need to copy the worker from this repo and adjust the `highlight.js` import.
 
 #### Webworker
 
