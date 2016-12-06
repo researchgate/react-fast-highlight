@@ -7,17 +7,23 @@
   
   Version 1.x works with React 0.14 and <=15.2
   
-  Version 2.x works with React >=15.3
-
-## Usage
+  Version >=2.0 works with React >=15.3
+  
+## Install
 
 `npm install --save react-fast-highlight`
 
-```js
-import React from 'react';
-import Highlight from 'react-fast-highlight';
+or
 
-class App extends React.Component {
+`yarn add react-fast-highlight`
+
+## Usage
+
+```js
+import React, { Component } from 'react';
+import { Highlight } from 'react-fast-highlight';
+
+class App extends Component {
 
   render() {
     const code = 'let t = 0.5 * 5 * 4;';
@@ -46,9 +52,56 @@ class App extends React.Component {
 }
 ```
 
-### Webworker
+### Advanced Usage
 
-#### Webpack
+#### Custom highlight.js distribution
+
+In cases where you bundle this component with a module bundler such as webpack, rollup or browserify and you know upfront 
+which languages you want to support you can supply a custom distribution of `highlight.js`. This ensures 
+you are not bundling all available languages of `highlight.js` which reduces the size of your bundle.
+
+A custom distribution might look like this
+
+```js
+import hljs from 'highlight.js/lib/highlight';
+
+// Lets only register javascript, scss, html/xml
+hljs.registerLanguage('scss', require('highlight.js/languages/scss'));
+hljs.registerLanguage('javascript', require('highlight.js/languages/javascript'));
+hljs.registerLanguage('xml', require('highlight.js/languages/xml'));
+
+export default hljs;
+```
+
+To actually use a custom distribution you need to use the `BareHighlight` component. With it
+you can build your wrapper for highlighting code.
+
+```js
+import React, { Component } from 'react';
+import { BareHighlight } from 'react-fast-highlight';
+import hljs from './customhljs';
+
+class CustomHighlight extends Component {
+  render() {
+    const { children, ...props } = this.props;
+    return (
+      <BareHighlight {...props} highlightjs={hljs}>
+        {children}
+      </BareHighlight>
+    );
+}
+```
+
+Now you can use this wrapper the same way as the default `Highlight` component with only support for
+certain languages.
+
+#### Webworker
+
+It wasn't tested with browserify and rollup but it should work.
+If you managed to get it working please open a PR with the necessary
+changes and the documentation.
+
+##### Webpack
 
 To make web-workers working with webpack you additionally need to install `worker-loader`.
 
@@ -56,7 +109,7 @@ To make web-workers working with webpack you additionally need to install `worke
 
 ```js
 import React from 'react';
-import Highlight from 'react-fast-highlight';
+import { Highlight } from 'react-fast-highlight';
 import Worker from 'worker!react-fast-highlight/lib/worker';
 
 class App extends React.Component {

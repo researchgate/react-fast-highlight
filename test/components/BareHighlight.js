@@ -2,15 +2,14 @@ import React from 'react';
 import td from 'testdouble';
 import test from 'ava';
 import { mount, shallow } from 'enzyme';
+import BareHighlight from '../../src/components/BareHighlight';
 
-const hjs = td.replace('highlight.js');
-const Highlight = require('../../src/components/Highlight').default;
-
-test.cb('no language - calls correct highlightCall', t => {
+test.cb('no language - calls correct highlightCall', (t) => {
+  const hjs = td.replace('highlight.js');
   td
     .when(hjs.highlightAuto('test', undefined))
     .thenReturn({ value: 'othertest', language: 'xml' });
-  const wrapper = mount(<Highlight>test</Highlight>);
+  const wrapper = mount(<BareHighlight highlightjs={hjs}>test</BareHighlight>);
 
   setTimeout(() => {
     t.is(wrapper.state('language'), 'xml');
@@ -19,11 +18,12 @@ test.cb('no language - calls correct highlightCall', t => {
   }, 1);
 });
 
-test.cb('one language - calls correct highlightCall', t => {
+test.cb('one language - calls correct highlightCall', (t) => {
+  const hjs = td.replace('highlight.js');
   td
     .when(hjs.highlight('js', 'test'))
     .thenReturn({ value: 'othertest', language: 'js' });
-  const wrapper = mount(<Highlight languages={['js']}>test</Highlight>);
+  const wrapper = mount(<BareHighlight highlightjs={hjs} languages={['js']}>test</BareHighlight>);
 
   setTimeout(() => {
     t.is(wrapper.state('language'), 'js');
@@ -32,11 +32,12 @@ test.cb('one language - calls correct highlightCall', t => {
   }, 1);
 });
 
-test.cb('multiple languages - calls correct highlightCall', t => {
+test.cb('multiple languages - calls correct highlightCall', (t) => {
+  const hjs = td.replace('highlight.js');
   td
     .when(hjs.highlightAuto('test', ['js', 'html']))
     .thenReturn({ value: 'othertest', language: 'js' });
-  const wrapper = mount(<Highlight languages={['js', 'html']}>test</Highlight>);
+  const wrapper = mount(<BareHighlight highlightjs={hjs} languages={['js', 'html']}>test</BareHighlight>);
 
   setTimeout(() => {
     t.is(wrapper.state('language'), 'js');
@@ -45,8 +46,9 @@ test.cb('multiple languages - calls correct highlightCall', t => {
   }, 1);
 });
 
-test('className is passed through', t => {
-  const wrapper = shallow(<Highlight className="foobar">test</Highlight>);
+test('className is passed through', (t) => {
+  const hjs = require('highlight.js');
+  const wrapper = shallow(<BareHighlight highlightjs={hjs} className="foobar">test</BareHighlight>);
 
   t.true(wrapper.childAt(0).hasClass('foobar'));
 });
