@@ -68,7 +68,7 @@ export default class Highlight extends PureComponent {
       const promise = new Promise(this.getHighlightCallback());
 
       promise.then(
-        result => this.setState({ highlightedCode: result.value, language: result.language })
+        result => this.setState({ highlightedCode: result.value, language: result.language }),
       );
     }
   }
