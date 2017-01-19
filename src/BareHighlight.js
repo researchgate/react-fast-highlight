@@ -17,6 +17,12 @@ type State = {
 
 export default class BareHighlight extends PureComponent {
 
+  static defaultProps = {
+    className: '',
+    languages: [],
+    worker: null,
+  };
+
   state: State = {
     highlightedCode: null,
     language: null,
@@ -97,7 +103,7 @@ export default class BareHighlight extends PureComponent {
 BareHighlight.propTypes = {
   children: PropTypes.string.isRequired,
   className: PropTypes.string,
-  highlightjs: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  highlightjs: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
   languages: PropTypes.arrayOf(PropTypes.string),
   worker: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };
