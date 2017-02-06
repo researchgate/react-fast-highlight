@@ -7,7 +7,7 @@ import BareHighlight from '../src/BareHighlight';
 test.cb('no language - calls correct highlightCall', (t) => {
   const hjs = td.replace('highlight.js');
   td
-    .when(hjs.highlightAuto('test', undefined))
+    .when(hjs.highlightAuto('test', []))
     .thenReturn({ value: 'othertest', language: 'xml' });
   const wrapper = mount(<BareHighlight highlightjs={hjs}>test</BareHighlight>);
 
