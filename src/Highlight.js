@@ -17,6 +17,12 @@ const Highlight = (props: Props) => {
   return <BareHighlight {...rest} highlightjs={hljs}>{children}</BareHighlight>;
 };
 
+Highlight.defaultProps = {
+  className: '',
+  languages: [],
+  worker: null,
+};
+
 Highlight.propTypes = {
   children: PropTypes.string.isRequired,
   className: PropTypes.string,
