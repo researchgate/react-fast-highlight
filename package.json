@@ -8,11 +8,10 @@
     "build": "babel src --out-dir lib",
     "flow": "flow",
     "lint": "eslint src",
-    "precommit": "yarn test",
     "prepublish": "yarn run clean && yarn run build",
     "preversion": "yarn test",
     "test": "yarn run lint && yarn run flow && yarn run test-only",
-    "test-only": "ava"
+    "test-only": "cross-env BABEL_ENV=test nyc ava"
   },
   "repository": {
     "type": "git",
@@ -41,11 +40,13 @@
     "ava": "^0.19.0",
     "babel-cli": "^6.14.0",
     "babel-eslint": "^7.0.0",
+    "babel-plugin-istanbul": "^4.1.1",
     "babel-plugin-transform-class-properties": "^6.11.5",
     "babel-plugin-transform-object-rest-spread": "^6.8.0",
     "babel-preset-latest": "^6.14.0",
     "babel-preset-react": "^6.11.1",
     "babel-register": "^6.14.0",
+    "cross-env": "^4.0.0",
     "enzyme": "^2.2.0",
     "eslint": "^3.15.0",
     "eslint-config-airbnb": "^14.1.0",
@@ -53,8 +54,8 @@
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.9.0",
     "flow-bin": "^0.43.0",
-    "husky": "^0.13.1",
     "jsdom": "^9.1.0",
+    "nyc": "^10.2.0",
     "react": "^15.3.0",
     "react-addons-test-utils": "^15.3.0",
     "react-dom": "^15.3.0",
@@ -66,11 +67,31 @@
     "highlight.js": "^9.0.0",
     "prop-types": "^15.5.6"
   },
+  "nyc": {
+    "all": true,
+    "require": [
+      "babel-register"
+    ],
+    "reporter": [
+      "text",
+      "json"
+    ],
+    "include": [
+      "src/**/*.js"
+    ],
+    "sourceMap": false,
+    "instrument": false
+  },
   "ava": {
     "require": [
-      "babel-register",
       "./test/helpers/setup-browser-env.js"
     ],
-    "babel": "inherit"
+    "babel": "inherit",
+    "files": [
+      "test/*.js"
+    ],
+    "source": [
+      "src/**/*.js"
+    ]
   }
 }
