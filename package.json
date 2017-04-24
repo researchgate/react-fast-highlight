@@ -54,7 +54,7 @@
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.9.0",
     "flow-bin": "^0.43.0",
-    "jsdom": "^9.1.0",
+    "jsdom": "^10.0.0",
     "nyc": "^10.2.0",
     "react": "^15.3.0",
     "react-addons-test-utils": "^15.3.0",
