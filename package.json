@@ -52,7 +52,7 @@
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.9.0",
+    "eslint-plugin-react": "^7.0.0",
     "flow-bin": "^0.43.0",
     "jsdom": "^9.1.0",
     "nyc": "^10.2.0",
