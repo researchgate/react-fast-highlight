@@ -1,5 +1,6 @@
 [ignore]
 .*/node_modules/fbjs/
+.*/node_modules/eslint-plugin-jsx-a11y/
 .*/node_modules/.*/test/.*$
 
 [include]
