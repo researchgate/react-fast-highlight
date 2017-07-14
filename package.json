@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/chili-labs/react-fast-highlight.git"
+    "url": "https://github.com/researchgate/react-fast-highlight.git"
   },
   "files": [
     "lib"
@@ -30,9 +30,9 @@
   "author": "Daniel Tschinder <daniel@tschinder.de>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chili-labs/react-fast-highlight/issues"
+    "url": "https://github.com/researchgate/react-fast-highlight/issues"
   },
-  "homepage": "https://github.com/chili-labs/react-fast-highlight#readme",
+  "homepage": "https://github.com/researchgate/react-fast-highlight#readme",
   "peerDependencies": {
     "react": "^15.3.0"
   },
