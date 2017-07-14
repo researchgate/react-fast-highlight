@@ -44,6 +44,10 @@ export default class BareHighlight extends PureComponent {
   }
 
   componentDidUpdate() {
+    // Do not call highlight.js if we already have highlighted code
+    // If the children changed highlightedCode will be null
+    if (this.state.highlightedCode) return;
+
     this._highlightCode();
   }
 
