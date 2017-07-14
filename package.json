@@ -61,7 +61,7 @@
     "react-dom": "^15.3.0",
     "react-test-renderer": "^15.5.4",
     "rimraf": "^2.5.0",
-    "testdouble": "^2.0.1"
+    "testdouble": "^3.0.0"
   },
   "dependencies": {
     "classnames": "^2.2.3",
