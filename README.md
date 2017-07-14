@@ -1,8 +1,8 @@
 # react-fast-highlight
 ###### A fast react component wrapper for highlight.js
 
-[![Build Status](https://travis-ci.org/chili-labs/react-fast-highlight.svg?branch=master)](https://travis-ci.org/chili-labs/react-fast-highlight)
-[![codecov](https://codecov.io/gh/chili-labs/react-fast-highlight/branch/master/graph/badge.svg)](https://codecov.io/gh/chili-labs/react-fast-highlight)
+[![Build Status](https://travis-ci.org/researchgate/react-fast-highlight.svg?branch=master)](https://travis-ci.org/researchgate/react-fast-highlight)
+[![codecov](https://codecov.io/gh/researchgate/react-fast-highlight/branch/master/graph/badge.svg)](https://codecov.io/gh/researchgate/react-fast-highlight)
 
 ## Requirements
   
