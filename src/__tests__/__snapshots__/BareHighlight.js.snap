@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`className is passed through 1`] = `
+<pre>
+  <code
+    className="foobar hljs"
+  >
+    test
+  </code>
+</pre>
+`;

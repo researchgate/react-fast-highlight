@@ -8,14 +8,17 @@ type Props = {
   children: string,
   className?: string,
   languages?: Array<string>,
-  worker?: Object,
+  worker?: ?Object,
 };
 
 const Highlight = (props: Props) => {
   const { children, ...rest } = props;
 
-  // $FlowIssue does not support children
-  return <BareHighlight {...rest} highlightjs={hljs}>{children}</BareHighlight>;
+  return (
+    <BareHighlight {...rest} highlightjs={hljs}>
+      {children}
+    </BareHighlight>
+  );
 };
 
 Highlight.defaultProps = {

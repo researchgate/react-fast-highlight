@@ -2,10 +2,11 @@
   "extends": "airbnb",
   "parser": "babel-eslint",
   "rules": {
-    "no-underscore-dangle": 0,
-    "react/jsx-filename-extension": 0,
-    "react/sort-comp": 0,
-    "react/no-danger": 0
+    "no-underscore-dangle": "off",
+    "react/jsx-filename-extension": "off",
+    "react/sort-comp": "off",
+    "react/no-danger": "off",
+    "arrow-parens": ["error", "as-needed"]
   },
   "globals": {
     "HighlightResult": false

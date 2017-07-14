@@ -8,7 +8,7 @@ type Props = {
   className?: string,
   highlightjs: Object,
   languages?: Array<string>,
-  worker?: Object,
+  worker?: ?Object,
 };
 
 type State = {
@@ -17,8 +17,11 @@ type State = {
 };
 
 export default class BareHighlight extends PureComponent {
-
-  static defaultProps = {
+  static defaultProps: {
+    className: string,
+    languages: Array<string>,
+    worker: ?Object,
+  } = {
     className: '',
     languages: [],
     worker: null,
@@ -54,7 +57,9 @@ export default class BareHighlight extends PureComponent {
   getInitialCode() {
     const type = typeof this.props.children;
     if (type !== 'string') {
-      throw new Error(`Children of <Highlight> must be a string. '${type}' supplied`);
+      throw new Error(
+        `Children of <Highlight> must be a string. '${type}' supplied`,
+      );
     }
 
     return this.props.children;
@@ -76,16 +81,19 @@ export default class BareHighlight extends PureComponent {
     const { languages, worker } = this.props;
 
     if (worker) {
-      worker.onmessage = event => this.setState({
-        highlightedCode: event.data.value,
-        language: event.data.language,
-      });
+      worker.onmessage = event =>
+        this.setState({
+          highlightedCode: event.data.value,
+          language: event.data.language,
+        });
       worker.postMessage({ code: this.getInitialCode(), languages });
     } else {
-      this.getHighlightPromise()
-        .then(
-          result => this.setState({ highlightedCode: result.value, language: result.language }),
-        );
+      this.getHighlightPromise().then(result =>
+        this.setState({
+          highlightedCode: result.value,
+          language: result.language,
+        }),
+      );
     }
   }
 
@@ -96,12 +104,21 @@ export default class BareHighlight extends PureComponent {
     if (code) {
       return (
         <pre>
-          <code className={classes} dangerouslySetInnerHTML={{ __html: code }} />
+          <code
+            className={classes}
+            dangerouslySetInnerHTML={{ __html: code }}
+          />
         </pre>
       );
     }
 
-    return <pre><code className={classes}>{this.getInitialCode()}</code></pre>;
+    return (
+      <pre>
+        <code className={classes}>
+          {this.getInitialCode()}
+        </code>
+      </pre>
+    );
   }
 }
 
