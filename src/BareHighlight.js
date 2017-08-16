@@ -16,7 +16,7 @@ type State = {
   language: ?string,
 };
 
-export default class BareHighlight extends PureComponent {
+export default class BareHighlight extends PureComponent<Props, State> {
   static defaultProps: {
     className: string,
     languages: Array<string>,
@@ -31,8 +31,6 @@ export default class BareHighlight extends PureComponent {
     highlightedCode: null,
     language: null,
   };
-
-  props: Props;
 
   componentDidMount() {
     this._highlightCode();
