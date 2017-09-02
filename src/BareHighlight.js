@@ -63,10 +63,10 @@ export default class BareHighlight extends PureComponent<Props, State> {
     return this.props.children;
   }
 
-  getHighlightPromise() {
+  getHighlightPromise(): Promise<*> {
     const { highlightjs, languages } = this.props;
 
-    return new Promise((resolve: (x: *) => void) => {
+    return new Promise(resolve => {
       if (languages && languages.length === 1) {
         resolve(highlightjs.highlight(languages[0], this.getInitialCode()));
       } else {
@@ -112,9 +112,7 @@ export default class BareHighlight extends PureComponent<Props, State> {
 
     return (
       <pre>
-        <code className={classes}>
-          {this.getInitialCode()}
-        </code>
+        <code className={classes}>{this.getInitialCode()}</code>
       </pre>
     );
   }
