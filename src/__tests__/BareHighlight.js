@@ -1,8 +1,11 @@
 /* eslint-env jest */
 import React from 'react';
-import { mount } from 'enzyme';
+import Enzyme, { mount } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-15';
 import highlightjs from 'highlight.js';
 import BareHighlight from '../BareHighlight';
+
+Enzyme.configure({ adapter: new Adapter() });
 
 test('no language - calls correct highlightCall', done => {
   const hljs = {
