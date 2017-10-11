@@ -5,11 +5,11 @@
 [![codecov](https://codecov.io/gh/researchgate/react-fast-highlight/branch/master/graph/badge.svg)](https://codecov.io/gh/researchgate/react-fast-highlight)
 
 ## Requirements
-  
+
   Version 1.x works with React 0.14 and <=15.2
-  
+
   Version >=2.0 works with React >=15.3 and 16
-  
+
 ## Install
 
 `npm install --save react-fast-highlight`
@@ -22,7 +22,7 @@ or
 
 ```js
 import React, { Component } from 'react';
-import Highlight from 'react-fast-highlight';
+import { Highlight } from 'react-fast-highlight';
 
 class App extends Component {
 
@@ -57,8 +57,8 @@ class App extends Component {
 
 #### Custom highlight.js distribution
 
-In cases where you bundle this component with a module bundler such as webpack, rollup or browserify and you know upfront 
-which languages you want to support you can supply a custom distribution of `highlight.js`. This ensures 
+In cases where you bundle this component with a module bundler such as webpack, rollup or browserify and you know upfront
+which languages you want to support you can supply a custom distribution of `highlight.js`. This ensures
 you are not bundling all available languages of `highlight.js` which reduces the size of your bundle.
 
 A custom distribution might look like this
@@ -79,7 +79,7 @@ you can build your wrapper for highlighting code.
 
 ```js
 import React, { Component } from 'react';
-import BareHighlight from 'react-fast-highlight/lib/BareHighlight';
+import { BareHighlight } from 'react-fast-highlight';
 import hljs from './customhljs';
 
 class CustomHighlight extends Component {
