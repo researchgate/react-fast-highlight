@@ -8,6 +8,9 @@ before_script:
   - greenkeeper-lockfile-update
   # true needs to be removed after https://github.com/conventional-changelog/conventional-github-releaser/pull/47 is fixed
   - 'if [[ -n "$TRAVIS_TAG" ]] && [[ "$TRAVIS_JOB_NUMBER" == *.1 ]]; then yarn run create-github-release || true; fi'
-script: yarn test
+script:
+  - yarn lint
+  - yarn flow
+  - yarn test:coverage
 after_script: greenkeeper-lockfile-upload
 after_success: bash <(curl -s https://codecov.io/bash) -f coverage/coverage-final.json

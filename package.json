@@ -12,11 +12,11 @@
     "flow": "flow",
     "format": "eslint --fix src test",
     "lint": "eslint src",
-    "prepare": "yarn run clean && yarn run build",
-    "prerelease": "yarn run test",
+    "prepare": "run-s clean build",
+    "prerelease": "run-s lint flow test",
     "release": "standard-version",
-    "test": "yarn run lint && yarn run flow && yarn run test-only",
-    "test-only": "jest --collectCoverage"
+    "test": "jest",
+    "test:coverage": "yarn test --collectCoverage"
   },
   "repository": {
     "type": "git",
