@@ -1,17 +1,7 @@
 {
-  "extends": "airbnb",
+  "extends": "@researchgate/eslint-config-rg-react",
   "parser": "babel-eslint",
-  "rules": {
-    "no-underscore-dangle": "off",
-    "react/jsx-filename-extension": "off",
-    "react/sort-comp": "off",
-    "react/no-danger": "off",
-    "arrow-parens": ["error", "as-needed"]
-  },
   "globals": {
     "HighlightResult": false
-  },
-  "env": {
-    "browser": true
   }
 }
