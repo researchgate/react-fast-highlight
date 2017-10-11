@@ -8,7 +8,7 @@
   
   Version 1.x works with React 0.14 and <=15.2
   
-  Version >=2.0 works with React >=15.3
+  Version >=2.0 works with React >=15.3 and 16
   
 ## Install
 
