@@ -31,7 +31,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 <a name="2.1.0"></a>
-## [2.1.0](https://github.com/researchgate/react-fast-highlight/compare/v2.0.0...v2.1.0) (2016-12-06)
+# [2.1.0](https://github.com/researchgate/react-fast-highlight/compare/v2.0.0...v2.1.0) (2016-12-06)
 
 
 ### Features
@@ -39,7 +39,7 @@ All notable changes to this project will be documented in this file. See [standa
 * Support custom highlight.js distributions
 
 <a name="2.0.0"></a>
-## [2.0.0](https://github.com/researchgate/react-fast-highlight/compare/v1.1.2...v2.0.0) (2016-08-03)
+# [2.0.0](https://github.com/researchgate/react-fast-highlight/compare/v1.1.2...v2.0.0) (2016-08-03)
 
 
 ### Features
@@ -70,7 +70,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 <a name="1.1.0"></a>
-## [1.1.1](https://github.com/researchgate/react-fast-highlight/compare/v1.0.2...v1.1.0) (2016-05-20)
+# [1.1.1](https://github.com/researchgate/react-fast-highlight/compare/v1.0.2...v1.1.0) (2016-05-20)
 
 
 ### Features
@@ -100,7 +100,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 <a name="1.0.0"></a>
-## [1.0.0](https://github.com/researchgate/react-fast-highlight/compare/v0.3.0...v1.0.0) (2016-02-21)
+# [1.0.0](https://github.com/researchgate/react-fast-highlight/compare/v0.3.0...v1.0.0) (2016-02-21)
 
 
 ### Bug Fixes
@@ -109,7 +109,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 <a name="0.3.0"></a>
-## 0.3.0 (2016-01-20)
+# 0.3.0 (2016-01-20)
 
 
 ### Bug Fixes
