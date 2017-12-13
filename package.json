@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@researchgate/babel-preset-rg": "^2.0.0-beta.0",
-    "@researchgate/eslint-config-rg-react": "^1.0.1",
+    "@researchgate/eslint-config-rg-react": "^2.0.0",
     "babel-cli": "^7.0.0-beta.2",
     "babel-core": "^7.0.0-beta.2",
     "babel-eslint": "^8.0.0",
