@@ -7,7 +7,7 @@ import BareHighlight from '../BareHighlight';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-test('no language - calls correct highlightCall', done => {
+test('no language - calls correct highlightCall', (done) => {
     const hljs = {
         highlightAuto: jest.fn(() => ({ value: 'othertest', language: 'xml' })),
     };
@@ -24,7 +24,7 @@ test('no language - calls correct highlightCall', done => {
     }, 1);
 });
 
-test('can correctly rerender code', done => {
+test('can correctly rerender code', (done) => {
     let value = 'initalresult';
     const hljs = {
         highlightAuto: jest.fn(() => ({ value, language: 'xml' })),
@@ -46,7 +46,7 @@ test('can correctly rerender code', done => {
     }, 1);
 });
 
-test('one language - calls correct highlightCall', done => {
+test('one language - calls correct highlightCall', (done) => {
     const hljs = {
         highlight: jest.fn(() => ({ value: 'othertest', language: 'js' })),
     };
@@ -67,7 +67,7 @@ test('one language - calls correct highlightCall', done => {
     }, 1);
 });
 
-test('multiple languages - calls correct highlightCall', done => {
+test('multiple languages - calls correct highlightCall', (done) => {
     const hljs = {
         highlightAuto: jest.fn(() => ({ value: 'othertest', language: 'js' })),
     };

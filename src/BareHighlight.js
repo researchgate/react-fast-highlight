@@ -64,7 +64,7 @@ export default class BareHighlight extends PureComponent<Props, State> {
     getHighlightPromise(): Promise<*> {
         const { highlightjs, languages } = this.props;
 
-        return new Promise(resolve => {
+        return new Promise((resolve) => {
             if (languages && languages.length === 1) {
                 resolve(highlightjs.highlight(languages[0], this.getInitialCode()));
             } else {
@@ -77,14 +77,14 @@ export default class BareHighlight extends PureComponent<Props, State> {
         const { languages, worker } = this.props;
 
         if (worker) {
-            worker.onmessage = event =>
+            worker.onmessage = (event) =>
                 this.setState({
                     highlightedCode: event.data.value,
                     language: event.data.language,
                 });
             worker.postMessage({ code: this.getInitialCode(), languages });
         } else {
-            this.getHighlightPromise().then(result =>
+            this.getHighlightPromise().then((result) =>
                 this.setState({
                     highlightedCode: result.value,
                     language: result.language,

@@ -4,7 +4,7 @@ import hjs from 'highlight.js';
 
 declare function postMessage(result: Object): void;
 
-onmessage = event => {
+onmessage = (event) => {
     const { code, languages } = event.data;
     let result;
     if (languages && languages.length === 1) {
