@@ -79,7 +79,7 @@ you can build your wrapper for highlighting code.
 
 ```js
 import React, { Component } from 'react';
-import { BareHighlight } from 'react-fast-highlight';
+import BareHighlight from 'react-fast-highlight/lib/BareHighlight';
 import hljs from './customhljs';
 
 class CustomHighlight extends Component {
