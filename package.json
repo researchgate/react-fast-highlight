@@ -48,7 +48,7 @@
     "@researchgate/eslint-config-rg-react": "^2.0.0",
     "babel-core": "^7.0.0-0",
     "babel-eslint": "^8.0.0",
-    "babel-jest": "^22.0.0",
+    "babel-jest": "^23.0.0",
     "conventional-github-releaser": "^2.0.0",
     "cross-env": "^5.0.5",
     "enzyme": "^3.1.0",
