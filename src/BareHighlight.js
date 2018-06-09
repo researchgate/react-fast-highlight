@@ -36,15 +36,14 @@ export default class BareHighlight extends PureComponent<Props, State> {
         this.highlightCode();
     }
 
-    componentWillReceiveProps(nextProps: Props) {
+    componentDidUpdate(prevProps: Props) {
         // If the text changed make sure to reset the state
         // This way we ensure that the new text is immediately displayed.
-        if (nextProps.children !== this.props.children) {
+        if (prevProps.children !== this.props.children) {
             this.setState({ highlightedCode: null, language: null });
+            return;
         }
-    }
 
-    componentDidUpdate() {
         // Do not call highlight.js if we already have highlighted code
         // If the children changed highlightedCode will be null
         if (this.state.highlightedCode) return;
