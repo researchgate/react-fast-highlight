@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.2.2"></a>
+## [2.2.2](https://github.com/researchgate/react-fast-highlight/compare/v2.2.1...v2.2.2) (2018-06-09)
+
+
+### Bug Fixes
+
+* **babel:** Do not include tests in published package ([03d0fc6](https://github.com/researchgate/react-fast-highlight/commit/03d0fc6))
+
+
+
 <a name="2.2.1"></a>
 ## [2.2.1](https://github.com/researchgate/react-fast-highlight/compare/v2.2.0...v2.2.1) (2018-06-09)
 
