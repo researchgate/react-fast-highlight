@@ -6,8 +6,8 @@
   "scripts": {
     "clean": "rimraf lib",
     "build": "run-p build:*",
-    "build:commonjs": "cross-env BABEL_ENV=production BABEL_OUTPUT=cjs babel src --out-dir lib --ignore __tests__",
-    "build:esm": "cross-env BABEL_ENV=production BABEL_OUTPUT=esm babel src --out-dir esm --ignore __tests__",
+    "build:commonjs": "cross-env BABEL_ENV=production BABEL_OUTPUT=cjs babel src --out-dir lib --ignore '**/__tests__'",
+    "build:esm": "cross-env BABEL_ENV=production BABEL_OUTPUT=esm babel src --out-dir esm --ignore '**/__tests__'",
     "create-github-release": "conventional-github-releaser -p angular",
     "flow": "flow",
     "format": "eslint --fix src test",
