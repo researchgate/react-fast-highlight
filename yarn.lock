@@ -700,15 +700,15 @@
     babel-plugin-transform-react-remove-prop-types "^0.4.9"
     babel-preset-react-hmre "^1.1.1"
 
-"@researchgate/eslint-config-rg-base@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@researchgate/eslint-config-rg-base/-/eslint-config-rg-base-2.0.1.tgz#9d7d03bf095bfd00e57eb90a43343e5a3b77bce3"
+"@researchgate/eslint-config-rg-base@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@researchgate/eslint-config-rg-base/-/eslint-config-rg-base-4.0.0.tgz#5ba6c88fafc7c64f7f0fbd55e8be74dc63be235b"
 
-"@researchgate/eslint-config-rg-react@^2.0.0":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@researchgate/eslint-config-rg-react/-/eslint-config-rg-react-2.0.1.tgz#0c1d393961836f1fdca5eb31f42dc277fd27c6a4"
+"@researchgate/eslint-config-rg-react@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@researchgate/eslint-config-rg-react/-/eslint-config-rg-react-4.0.0.tgz#cf8977f17f6b72528cdcd22fd3a71d5131b00aad"
   dependencies:
-    "@researchgate/eslint-config-rg-base" "^2.0.1"
+    "@researchgate/eslint-config-rg-base" "^4.0.0"
 
 "@sindresorhus/is@^0.7.0":
   version "0.7.0"
