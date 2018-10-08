@@ -1,37 +1,39 @@
 /* @flow */
-import React from 'react';
-import PropTypes from 'prop-types';
-import hljs from 'highlight.js';
-import BareHighlight from './BareHighlight';
+import React from "react";
+import PropTypes from "prop-types";
+import hljs from "highlight.js";
+import BareHighlight from "./BareHighlight";
 
 type Props = {
-    children: string,
-    className?: string,
-    languages?: Array<string>,
-    worker?: ?Object,
+  children: string,
+  className?: string,
+  languages?: Array<string>,
+  worker?: ?Object,
+  customHighlight?: func
 };
 
 const Highlight = (props: Props) => {
-    const { children, ...rest } = props;
+  const { children, ...rest } = props;
 
-    return (
-        <BareHighlight {...rest} highlightjs={hljs}>
-            {children}
-        </BareHighlight>
-    );
+  return (
+    <BareHighlight {...rest} highlightjs={hljs}>
+      {children}
+    </BareHighlight>
+  );
 };
 
 Highlight.defaultProps = {
-    className: '',
-    languages: [],
-    worker: null,
+  className: "",
+  languages: [],
+  worker: null
 };
 
 Highlight.propTypes = {
-    children: PropTypes.string.isRequired,
-    className: PropTypes.string,
-    languages: PropTypes.arrayOf(PropTypes.string),
-    worker: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  children: PropTypes.string.isRequired,
+  customHighlight: PropTypes.func,
+  className: PropTypes.string,
+  languages: PropTypes.arrayOf(PropTypes.string),
+  worker: PropTypes.object // eslint-disable-line react/forbid-prop-types
 };
 
 export default Highlight;
