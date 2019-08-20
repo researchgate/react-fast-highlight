@@ -1,15 +1,3 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
--   [react-fast-highlight](#react-fast-highlight)
-    -   [Requirements](#requirements)
-    -   [Install](#install)
-    -   [Usage](#usage)
-        -   [Advanced Usage](#advanced-usage)
-    -   [License](#license)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 # react-fast-highlight
 
 ###### A fast react component wrapper for highlight.js
