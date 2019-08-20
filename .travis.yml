@@ -3,6 +3,7 @@ node_js:
   - "12"
   - "10"
   - "8"
+cache: yarn
 before_script:
   - 'if [[ -n "$TRAVIS_TAG" ]] && [[ "$TRAVIS_JOB_NUMBER" == *.1 ]]; then yarn run create-github-release; fi'
 script:
