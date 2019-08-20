@@ -1,4 +1,17 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+-   [react-fast-highlight](#react-fast-highlight)
+    -   [Requirements](#requirements)
+    -   [Install](#install)
+    -   [Usage](#usage)
+        -   [Advanced Usage](#advanced-usage)
+    -   [License](#license)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # react-fast-highlight
+
 ###### A fast react component wrapper for highlight.js
 
 [![Build Status](https://travis-ci.org/researchgate/react-fast-highlight.svg?branch=master)](https://travis-ci.org/researchgate/react-fast-highlight)
@@ -6,9 +19,9 @@
 
 ## Requirements
 
-  Version 1.x works with React 0.14 and <=15.2
+Version 1.x works with React 0.14 and <=15.2
 
-  Version >=2.0 works with React >=15.3 and 16
+Version >=2.0 works with React >=15.3 and 16
 
 ## Install
 
@@ -57,9 +70,11 @@ class App extends Component {
 
 #### Custom highlight.js distribution
 
-In cases where you bundle this component with a module bundler such as webpack, rollup or browserify and you know upfront
-which languages you want to support you can supply a custom distribution of `highlight.js`. This ensures
-you are not bundling all available languages of `highlight.js` which reduces the size of your bundle.
+In cases where you bundle this component with a module bundler such as webpack,
+rollup or browserify and you know upfront which languages you want to support
+you can supply a custom distribution of `highlight.js`. This ensures you are not
+bundling all available languages of `highlight.js` which reduces the size of
+your bundle.
 
 A custom distribution might look like this
 
@@ -74,8 +89,8 @@ hljs.registerLanguage('xml', require('highlight.js/lib/languages/xml'));
 export default hljs;
 ```
 
-To actually use a custom distribution you need to use the `BareHighlight` component. With it
-you can build your wrapper for highlighting code.
+To actually use a custom distribution you need to use the `BareHighlight`
+component. With it you can build your wrapper for highlighting code.
 
 ```js
 import React, { Component } from 'react';
@@ -93,21 +108,23 @@ class CustomHighlight extends Component {
 }
 ```
 
-Now you can use this wrapper the same way as the default `Highlight` component with only support for
-certain languages included.
+Now you can use this wrapper the same way as the default `Highlight` component
+with only support for certain languages included.
 
-> In case you also want to use a webworker you should not use the supplied worker, as it includes all
-> languages. Instead you will need to copy the worker from this repo and adjust the `highlight.js` import.
+> In case you also want to use a webworker you should not use the supplied
+> worker, as it includes all languages. Instead you will need to copy the worker
+> from this repo and adjust the `highlight.js` import.
 
 #### Webworker
 
-It wasn't tested with browserify and rollup but it should work.
-If you managed to get it working please open a PR with the necessary
-changes and the documentation.
+It wasn't tested with browserify and rollup but it should work. If you managed
+to get it working please open a PR with the necessary changes and the
+documentation.
 
 ##### Webpack
 
-To make web-workers working with webpack you additionally need to install `worker-loader`.
+To make web-workers working with webpack you additionally need to install
+`worker-loader`.
 
 `npm install --save worker-loader react-fast-highlight`
 

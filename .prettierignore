@@ -2,4 +2,3 @@ esm
 flow-typed
 lib
 node_modules
-babel.config.js
