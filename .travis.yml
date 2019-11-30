@@ -1,13 +1,7 @@
 language: node_js
-node_js:
-  - "12"
-  - "10"
-  - "8"
+node_js: "node"
 cache: yarn
-before_script:
-  - 'if [[ -n "$TRAVIS_TAG" ]] && [[ "$TRAVIS_JOB_NUMBER" == *.1 ]]; then yarn run create-github-release; fi'
 script:
   - yarn lint
-  - yarn flow
   - yarn test:coverage
 after_success: bash <(curl -s https://codecov.io/bash) -f coverage/coverage-final.json
