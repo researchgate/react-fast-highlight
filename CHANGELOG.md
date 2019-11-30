@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/researchgate/react-fast-highlight/compare/v2.2.2...v3.0.0) (2019-11-30)
+
+
+### Features
+
+* Migrate to typescript and spire ([e2ae43f](https://github.com/researchgate/react-fast-highlight/commit/e2ae43f6a07319c40adb95554d73c686deb4ec36))
+
+
+### BREAKING CHANGES
+
+* No default export anymore. Use named exports.
+
 # Change Log
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
