@@ -74,7 +74,8 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "src/**/*.js",
+      "src/**/*.ts",
+      "src/**/*.tsx",
       "!src/**/__tests__/**/*"
     ],
     "setupFilesAfterEnv": [
