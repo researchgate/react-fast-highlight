@@ -82,7 +82,7 @@ component. With it you can build your wrapper for highlighting code.
 
 ```js
 import React, { Component } from 'react';
-import BareHighlight from 'react-fast-highlight/lib/BareHighlight';
+import BareHighlight from 'react-fast-highlight/lib/js/BareHighlight';
 import hljs from './customhljs';
 
 class CustomHighlight extends Component {
@@ -119,7 +119,7 @@ To make web-workers working with webpack you additionally need to install
 ```js
 import React from 'react';
 import { Highlight } from 'react-fast-highlight';
-import Worker from 'worker!react-fast-highlight/lib/worker';
+import Worker from 'worker!react-fast-highlight/lib/js/worker';
 
 class App extends React.Component {
 
