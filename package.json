@@ -15,7 +15,7 @@
     "format": "spire format",
     "lint": "spire lint",
     "prepare": "run-s clean build",
-    "prerelease": "run-s lint flow test",
+    "prerelease": "run-s lint test",
     "release": "spire release",
     "test": "spire test",
     "test:coverage": "spire test --coverage"
