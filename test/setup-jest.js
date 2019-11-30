@@ -1,15 +1,8 @@
 /* eslint-env jest */
-/* global jasmine */
-import { toMatchSnapshot } from 'jest-snapshot';
-import renderer from 'react-test-renderer';
+import Enzyme from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
-expect.extend({
-    toMatchReactSnapshot(received, testName) {
-        const tree = renderer.create(received).toJSON();
-
-        return toMatchSnapshot.call(this, tree, testName);
-    },
-});
+Enzyme.configure({ adapter: new Adapter() });
 
 // eslint-disable-next-line no-console
 const consoleError = console.error;
@@ -18,12 +11,12 @@ function logToError(error) {
     throw new Error(error);
 }
 
-jasmine.getEnv().beforeEach(() => {
+beforeEach(() => {
     // eslint-disable-next-line no-console
     console.error = logToError;
 });
 
-jasmine.getEnv().afterEach(() => {
+afterEach(() => {
     // eslint-disable-next-line no-console
     console.error = consoleError;
 });

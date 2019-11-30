@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "declaration": true,
+    "outDir": "./typings",
+    "emitDeclarationOnly": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/*"]
+}

@@ -1,18 +1,16 @@
-/* eslint-env jest */
 import React from 'react';
-import Enzyme, { mount } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { mount, shallow } from 'enzyme';
 import highlightjs from 'highlight.js';
 import BareHighlight from '../BareHighlight';
-
-Enzyme.configure({ adapter: new Adapter() });
 
 test('no language - calls correct highlightCall', (done) => {
     const hljs = {
         highlightAuto: jest.fn(() => ({ value: 'othertest', language: 'xml' })),
     };
 
-    const wrapper = mount(<BareHighlight highlightjs={hljs}>test</BareHighlight>);
+    const wrapper = mount(
+        <BareHighlight highlightjs={hljs}>test</BareHighlight>
+    );
 
     setTimeout(() => {
         expect(wrapper.state('language')).toBe('xml');
@@ -30,7 +28,9 @@ test('can correctly rerender code', (done) => {
         highlightAuto: jest.fn(() => ({ value, language: 'xml' })),
     };
 
-    const wrapper = mount(<BareHighlight highlightjs={hljs}>test</BareHighlight>);
+    const wrapper = mount(
+        <BareHighlight highlightjs={hljs}>test</BareHighlight>
+    );
 
     setTimeout(() => {
         value = 'changed';
@@ -54,7 +54,7 @@ test('one language - calls correct highlightCall', (done) => {
     const wrapper = mount(
         <BareHighlight highlightjs={hljs} languages={['js']}>
             test
-        </BareHighlight>,
+        </BareHighlight>
     );
 
     setTimeout(() => {
@@ -75,7 +75,7 @@ test('multiple languages - calls correct highlightCall', (done) => {
     const wrapper = mount(
         <BareHighlight highlightjs={hljs} languages={['js', 'html']}>
             test
-        </BareHighlight>,
+        </BareHighlight>
     );
 
     setTimeout(() => {
@@ -89,9 +89,10 @@ test('multiple languages - calls correct highlightCall', (done) => {
 });
 
 test('className is passed through', () => {
-    expect(
+    const wrapper = shallow(
         <BareHighlight highlightjs={highlightjs} className="foobar">
             test
-        </BareHighlight>,
-    ).toMatchReactSnapshot();
+        </BareHighlight>
+    );
+    expect(wrapper).toMatchSnapshot();
 });
