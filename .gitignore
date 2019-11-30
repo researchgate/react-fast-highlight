@@ -1,6 +1,5 @@
 .nyc_output
 coverage
-esm
 lib
 node_modules
-npm-debug.log
+typings
