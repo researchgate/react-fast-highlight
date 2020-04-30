@@ -1959,10 +1959,10 @@
   dependencies:
     "@types/node" ">= 8"
 
-"@researchgate/babel-preset@1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@researchgate/babel-preset/-/babel-preset-1.5.0.tgz#79fd8999879b533e6972fac60afc9a3a59231d4d"
-  integrity sha512-c3ATBG3thwthDJLI4xYAJQtUDSCX2CK5/VvkaYlV5lt/UJuw7U8rAmB5kf5sZQ84hEdwwQjwk7Xz3fDvthe5eQ==
+"@researchgate/babel-preset@1.5.2":
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/@researchgate/babel-preset/-/babel-preset-1.5.2.tgz#1ffd2ae74705c3639088d8d8fa9d82c5c29c426e"
+  integrity sha512-naI5l9KpY+4oiJCwz3V0MjraftQH1fswVjkFoVQhDLPPB4iaWmZFIJM2PUsEVm/tJO1XOdTh+Jr4Hb/QCUSGQQ==
   dependencies:
     "@babel/plugin-proposal-class-properties" "^7.4.0"
     "@babel/plugin-proposal-object-rest-spread" "^7.4.3"
