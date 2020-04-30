@@ -51,7 +51,7 @@
     "@babel/preset-typescript": "7.9.0",
     "@researchgate/babel-preset": "1.5.2",
     "@researchgate/spire-config": "2.1.5",
-    "@types/classnames": "2.2.9",
+    "@types/classnames": "2.2.10",
     "@types/prop-types": "15.7.3",
     "@types/react": "16.9.13",
     "cross-env": "6.0.3",
