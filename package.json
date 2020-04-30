@@ -46,9 +46,9 @@
     "react": "^16.0.0"
   },
   "devDependencies": {
-    "@babel/cli": "7.7.4",
-    "@babel/core": "7.7.4",
-    "@babel/preset-typescript": "7.7.4",
+    "@babel/cli": "7.8.4",
+    "@babel/core": "7.9.6",
+    "@babel/preset-typescript": "7.9.0",
     "@researchgate/babel-preset": "1.5.0",
     "@researchgate/spire-config": "2.1.0",
     "@types/classnames": "2.2.9",
