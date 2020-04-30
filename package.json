@@ -42,8 +42,8 @@
   },
   "homepage": "https://github.com/researchgate/react-fast-highlight#readme",
   "peerDependencies": {
-    "react": "^16.0.0",
-    "highlight.js": "^9.0.0 || ^10.0.0"
+    "highlight.js": "^9.0.0 || ^10.0.0",
+    "react": "^16.0.0"
   },
   "devDependencies": {
     "@babel/cli": "7.7.4",
