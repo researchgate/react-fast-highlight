@@ -50,7 +50,7 @@
     "@babel/core": "7.9.6",
     "@babel/preset-typescript": "7.9.0",
     "@researchgate/babel-preset": "1.5.3",
-    "@researchgate/spire-config": "3.0.0",
+    "@researchgate/spire-config": "4.0.0",
     "@types/classnames": "2.2.10",
     "@types/prop-types": "15.7.3",
     "@types/react": "16.9.34",
