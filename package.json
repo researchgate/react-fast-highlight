@@ -49,7 +49,7 @@
     "@babel/cli": "7.8.4",
     "@babel/core": "7.9.6",
     "@babel/preset-typescript": "7.9.0",
-    "@researchgate/babel-preset": "1.5.3",
+    "@researchgate/babel-preset": "2.0.0",
     "@researchgate/spire-config": "4.0.1",
     "@types/classnames": "2.2.10",
     "@types/prop-types": "15.7.3",
