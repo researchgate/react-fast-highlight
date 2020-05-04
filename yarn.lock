@@ -1342,18 +1342,18 @@
   dependencies:
     "@researchgate/eslint-config-base" "^2.0.0"
 
-"@researchgate/eslint-config-react-typescript@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@researchgate/eslint-config-react-typescript/-/eslint-config-react-typescript-2.0.0.tgz#e1084a7293b57e95b049318d612a7cb58bdd8f8b"
-  integrity sha512-1WvXt8zFpi9Mya0fXDia7Aw6A7wraM4KMZf9+qiR/h4DxPydrVFYL8/j7Ax9CLJnT3c8P6Rt98+x+Y29ZG5F+A==
+"@researchgate/eslint-config-react-typescript@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@researchgate/eslint-config-react-typescript/-/eslint-config-react-typescript-2.0.1.tgz#c2644b03937d960e411dd4c23ed51cad1707574a"
+  integrity sha512-hMKrV/PdzFxK3WvWRH3qsHO8R3IZ09QhbSI5DX3pX5RDSZCbZ9BMdT7ePeycPBR7AvafQcneFuPtbqgPoFfWfg==
   dependencies:
-    "@researchgate/eslint-config-react" "^2.0.0"
+    "@researchgate/eslint-config-react" "^2.0.1"
     "@researchgate/eslint-settings-typescript" "^1.6.1"
 
-"@researchgate/eslint-config-react@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@researchgate/eslint-config-react/-/eslint-config-react-2.0.0.tgz#d72151093fc13dcf3ead93616dad7e3d7cabfa34"
-  integrity sha512-/kXxztP6JA0MfnYuCWCz/npYXjri1MTTB9ycBMq0DePAEY9NfCiL7W+UNFxkqr9firxlFLNFAOU3x1eZWceS7w==
+"@researchgate/eslint-config-react@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@researchgate/eslint-config-react/-/eslint-config-react-2.0.1.tgz#79ec96742ff4bb20b14d123d2830f50e4e5663e1"
+  integrity sha512-KRj3qUIICFmjyMie67PAGcjsz6yCS6CcKo5U+zG3ahzmm7hPfMSUyZj4nyYBtcXNopTaS3/NpVd6syDB1SvFbw==
   dependencies:
     "@researchgate/eslint-config-base" "^2.0.0"
 
@@ -1386,15 +1386,15 @@
   resolved "https://registry.yarnpkg.com/@researchgate/prettier-config/-/prettier-config-1.3.1.tgz#f65851bf336372ef3196289d3dd0abb5a2644e78"
   integrity sha512-AJ0zhVwC84OJ6pWSSJpFJCzj3+YZbtsjd2YoTPB/O09RaVsmuw9hWa7ybZA/iiopxf5QDAsAau1RIR8alY3cQw==
 
-"@researchgate/spire-config@4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@researchgate/spire-config/-/spire-config-4.0.0.tgz#e587a029339a6ddfff283f0278dd41bd2da24204"
-  integrity sha512-9NUhNSH8tuDsYyHhyAS+2Vhuop9qBNaD5AiSwC8sBczRZEHyMciCkXd2Ux6wBDAWAReBnyNi42Gk3X2eQ0Ekmg==
+"@researchgate/spire-config@4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@researchgate/spire-config/-/spire-config-4.0.1.tgz#7c313c445160582e555f7ce70b1b834f821a8c3f"
+  integrity sha512-VCPrwr3InvJO00xR6/kHSLW0iPgXWVSK6YYBYQ2Deegf8HFYenaQHK6DlJPbOFq1GSwr+vf2LAtNfkGqNxAtQw==
   dependencies:
     "@researchgate/eslint-config-node" "^2.0.0"
     "@researchgate/eslint-config-node-babel" "^2.0.0"
-    "@researchgate/eslint-config-react" "^2.0.0"
-    "@researchgate/eslint-config-react-typescript" "^2.0.0"
+    "@researchgate/eslint-config-react" "^2.0.1"
+    "@researchgate/eslint-config-react-typescript" "^2.0.1"
     "@researchgate/jest-preset-react" "^1.0.0"
     "@researchgate/prettier-config" "^1.3.1"
     babel-eslint "^10.0.3"
@@ -1404,7 +1404,7 @@
     eslint-plugin-node "^11.0.0"
     eslint-plugin-prettier "^3.1.1"
     eslint-plugin-react "^7.12.4"
-    eslint-plugin-react-hooks "^3.0.0"
+    eslint-plugin-react-hooks "^4.0.0"
     prettier "^2.0.0"
     spire-plugin-yarn "^2.0.0"
 
@@ -3770,10 +3770,10 @@ eslint-plugin-prettier@^3.1.0, eslint-plugin-prettier@^3.1.1:
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
-eslint-plugin-react-hooks@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-3.0.0.tgz#9e80c71846eb68dd29c3b21d832728aa66e5bd35"
-  integrity sha512-EjxTHxjLKIBWFgDJdhKKzLh5q+vjTFrqNZX36uIxWS4OfyXe5DawqPj3U5qeJ1ngLwatjzQnmR0Lz0J0YH3kxw==
+eslint-plugin-react-hooks@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.0.0.tgz#81196b990043cde339e25c6662aeebe32ac52d01"
+  integrity sha512-YKBY+kilK5wrwIdQnCF395Ya6nDro3EAMoe+2xFkmyklyhF16fH83TrQOo9zbZIDxBsXFgBbywta/0JKRNFDkw==
 
 eslint-plugin-react@^7.12.4:
   version "7.19.0"
