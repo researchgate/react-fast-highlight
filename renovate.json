@@ -2,5 +2,11 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["@researchgate:lib"],
   "automergeType": "branch",
-  "labels": ["dependencies"]
+  "labels": ["dependencies"],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge":true,
+    "automergeType":"branch",
+    "extends": "schedule:weekly"
+  }
 }
