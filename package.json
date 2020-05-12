@@ -65,7 +65,7 @@
     "react-dom": "16.13.1",
     "rimraf": "3.0.2",
     "spire": "2.1.4",
-    "spire-plugin-semantic-release": "2.1.4",
+    "spire-plugin-semantic-release": "2.1.5",
     "typescript": "3.8.3"
   },
   "dependencies": {
