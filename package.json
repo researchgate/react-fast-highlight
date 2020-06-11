@@ -50,7 +50,7 @@
     "@babel/core": "7.10.2",
     "@babel/preset-typescript": "7.10.1",
     "@researchgate/babel-preset": "2.0.1",
-    "@researchgate/spire-config": "4.0.3",
+    "@researchgate/spire-config": "4.1.1",
     "@types/classnames": "2.2.10",
     "@types/prop-types": "15.7.3",
     "@types/react": "16.9.36",
@@ -64,7 +64,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "rimraf": "3.0.2",
-    "spire": "2.1.4",
+    "spire": "2.2.0",
     "spire-plugin-semantic-release": "2.1.5",
     "typescript": "3.9.5"
   },
