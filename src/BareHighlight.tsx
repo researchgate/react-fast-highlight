@@ -1,7 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import hljs from 'highlight.js';
+import type hljs from 'highlight.js';
 
 interface Props {
   children: string;
@@ -12,8 +12,8 @@ interface Props {
 }
 
 interface State {
-  highlightedCode: string | null;
-  language: string | null;
+  highlightedCode?: string;
+  language?: string;
 }
 
 export default class BareHighlight extends React.PureComponent<Props, State> {
@@ -31,10 +31,7 @@ export default class BareHighlight extends React.PureComponent<Props, State> {
     worker: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   };
 
-  state: State = {
-    highlightedCode: null,
-    language: null,
-  };
+  state: State = {};
 
   componentDidMount() {
     this.highlightCode();
@@ -44,7 +41,7 @@ export default class BareHighlight extends React.PureComponent<Props, State> {
     // If the text changed make sure to reset the state
     // This way we ensure that the new text is immediately displayed.
     if (prevProps.children !== this.props.children) {
-      this.setState({ highlightedCode: null, language: null });
+      this.setState({ highlightedCode: undefined, language: undefined });
       return;
     }
 
@@ -66,7 +63,7 @@ export default class BareHighlight extends React.PureComponent<Props, State> {
     return this.props.children;
   }
 
-  getHighlightPromise(): Promise<hljs.IHighlightResultBase> {
+  getHighlightPromise(): Promise<ReturnType<typeof hljs.highlight>> {
     const { highlightjs, languages } = this.props;
     return new Promise((resolve) => {
       if (languages && languages.length === 1) {

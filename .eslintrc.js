@@ -1,2 +1,7 @@
 // This file was created by spire-plugin-eslint for editor support
-module.exports = require('@researchgate/spire-config/eslint/react-typescript');
+const config = require('@researchgate/spire-config/eslint/react-typescript');
+
+config.globals = config.globals || {};
+config.globals.ReturnType = false;
+
+module.exports = config;
