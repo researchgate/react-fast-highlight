@@ -1393,10 +1393,10 @@
   dependencies:
     "@types/node" ">= 8"
 
-"@researchgate/babel-preset@2.0.6":
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/@researchgate/babel-preset/-/babel-preset-2.0.6.tgz#96b4df4e393759b5b62db491f21189f068dbd4d8"
-  integrity sha512-YUdzcBkLZgCpOjoLpbU/8coz8qCAKOijYkJb6E9GfGe//r6RRsk80J19F/I492DzOwJJPnT0AfrrlfPoqgA8GA==
+"@researchgate/babel-preset@2.0.7":
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/@researchgate/babel-preset/-/babel-preset-2.0.7.tgz#8d0d2c9ab03a8213233c919ab1b8fedef81cb8a4"
+  integrity sha512-cnr5LzeaF4aUNec4Gf3ReQDh+EBX8tU2CjcZtUJ/JLkGA6AZtCywGukXZt+ujrrpQSMN5+e5H7XiI9qESmC0HQ==
   dependencies:
     "@babel/plugin-proposal-class-properties" "^7.4.0"
     "@babel/plugin-proposal-object-rest-spread" "^7.4.3"
