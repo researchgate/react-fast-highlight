@@ -11,7 +11,6 @@
     "build:commonjs": "cross-env BABEL_ENV=production BABEL_OUTPUT=cjs babel src --out-dir lib/js --extensions .ts,.tsx --ignore '**/__tests__'",
     "build:esm": "cross-env BABEL_ENV=production BABEL_OUTPUT=esm babel src --out-dir lib/esm --extensions .ts,.tsx --ignore '**/__tests__'",
     "build:types": "tsc",
-    "create-github-release": "conventional-github-releaser -p angular",
     "format": "spire format",
     "lint": "spire lint",
     "prepare": "run-s clean build",
