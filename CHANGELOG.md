@@ -1,3 +1,10 @@
+# [4.1.0](https://github.com/researchgate/react-fast-highlight/compare/v4.0.0...v4.1.0) (2021-03-07)
+
+
+### Features
+
+* Replace classnames dependency with clsx ([7f6222f](https://github.com/researchgate/react-fast-highlight/commit/7f6222fef56cd1c4c5cf13f70196ae3e07a7fc8f))
+
 # [4.0.0](https://github.com/researchgate/react-fast-highlight/compare/v3.0.0...v4.0.0) (2020-04-30)
 
 ### Bug Fixes
