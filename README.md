@@ -2,7 +2,6 @@
 
 ###### A fast react component wrapper for highlight.js
 
-[![Build Status](https://travis-ci.com/researchgate/react-fast-highlight.svg?branch=master)](https://travis-ci.com/researchgate/react-fast-highlight)
 [![codecov](https://codecov.io/gh/researchgate/react-fast-highlight/branch/master/graph/badge.svg)](https://codecov.io/gh/researchgate/react-fast-highlight)
 
 ## Requirements
@@ -70,7 +69,10 @@ import hljs from 'highlight.js/lib/highlight';
 
 // Lets only register javascript, scss, html/xml
 hljs.registerLanguage('scss', require('highlight.js/lib/languages/scss'));
-hljs.registerLanguage('javascript', require('highlight.js/lib/languages/javascript'));
+hljs.registerLanguage(
+  'javascript',
+  require('highlight.js/lib/languages/javascript')
+);
 hljs.registerLanguage('xml', require('highlight.js/lib/languages/xml'));
 
 export default hljs;

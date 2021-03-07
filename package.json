@@ -17,8 +17,7 @@
     "prepare": "run-s clean build",
     "prerelease": "run-s lint test",
     "release": "spire release",
-    "test": "spire test",
-    "test:coverage": "spire test --coverage"
+    "test": "spire test"
   },
   "repository": {
     "type": "git",
