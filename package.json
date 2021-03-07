@@ -14,7 +14,6 @@
     "format": "spire format",
     "lint": "spire lint",
     "prepare": "run-s clean build",
-    "prerelease": "run-s lint test",
     "release": "spire release --branches main",
     "test": "spire test"
   },
