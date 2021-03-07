@@ -21,14 +21,14 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v1
       with:
-        node-version: ${{ env.NODDE_VERSION }}
+        node-version: ${{ env.NODE_VERSION }}
 
     - name: Cache node_modules
       uses: actions/cache@v2
       id: cache-nodemodules
       with:
         path: node_modules
-        key: ${{ runner.os }}-${{ env.NODDE_VERSION }}-nodemodules-${{ hashFiles('**/yarn.lock') }}
+        key: ${{ runner.os }}-${{ env.NODE_VERSION }}-nodemodules-${{ hashFiles('**/yarn.lock') }}
 
     - name: Install dependencies
       if: steps.cache-nodemodules.outputs.cache-hit != 'true'
@@ -54,14 +54,14 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v1
       with:
-        node-version: ${{ env.NODDE_VERSION }}
+        node-version: ${{ env.NODE_VERSION }}
 
     - name: Cache node_modules
       uses: actions/cache@v2
       id: cache-nodemodules
       with:
         path: node_modules
-        key: ${{ runner.os }}-${{ env.NODDE_VERSION }}-nodemodules-${{ hashFiles('**/yarn.lock') }}
+        key: ${{ runner.os }}-${{ env.NODE_VERSION }}-nodemodules-${{ hashFiles('**/yarn.lock') }}
 
     - name: Install dependencies
       if: steps.cache-nodemodules.outputs.cache-hit != 'true'
@@ -85,14 +85,14 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ env.NODDE_VERSION }}
+          node-version: ${{ env.NODE_VERSION }}
 
       - name: Cache node_modules
         uses: actions/cache@v2
         id: cache-nodemodules
         with:
           path: node_modules
-          key: ${{ runner.os }}-${{ env.NODDE_VERSION }}-nodemodules-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-${{ env.NODE_VERSION }}-nodemodules-${{ hashFiles('**/yarn.lock') }}
 
       - name: Install dependencies
         if: steps.cache-nodemodules.outputs.cache-hit != 'true'
