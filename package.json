@@ -16,7 +16,7 @@
     "lint": "spire lint",
     "prepare": "run-s clean build",
     "prerelease": "run-s lint test",
-    "release": "spire release",
+    "release": "spire release --branches main",
     "test": "spire test"
   },
   "repository": {
