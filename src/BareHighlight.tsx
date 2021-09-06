@@ -67,7 +67,9 @@ export default class BareHighlight extends React.PureComponent<Props, State> {
     const { highlightjs, languages } = this.props;
     return new Promise((resolve) => {
       if (languages && languages.length === 1) {
-        resolve(highlightjs.highlight(this.getInitialCode(), { language: languages[0] }));
+        resolve(highlightjs.highlight(this.getInitialCode(), {
+          language: languages[0],
+        }));
       } else {
         resolve(highlightjs.highlightAuto(this.getInitialCode(), languages));
       }
