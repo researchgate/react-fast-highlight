@@ -47,7 +47,7 @@
     "@babel/core": "7.16.10",
     "@babel/preset-typescript": "7.16.7",
     "@researchgate/babel-preset": "2.0.14",
-    "@researchgate/spire-config": "5.0.7",
+    "@researchgate/spire-config": "7.0.0",
     "@types/classnames": "2.3.0",
     "@types/prop-types": "15.7.4",
     "@types/react": "16.14.21",
@@ -61,8 +61,8 @@
     "react": "16.14.0",
     "react-dom": "16.14.0",
     "rimraf": "3.0.2",
-    "spire": "3.2.3",
-    "spire-plugin-semantic-release": "3.2.3",
+    "spire": "5.0.2",
+    "spire-plugin-semantic-release": "5.0.1",
     "typescript": "4.5.4"
   },
   "dependencies": {
