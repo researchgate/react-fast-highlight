@@ -49,7 +49,7 @@
     "@researchgate/babel-preset": "2.0.14",
     "@researchgate/spire-config": "5.0.7",
     "@types/classnames": "2.3.0",
-    "@types/prop-types": "15.7.4",
+    "@types/prop-types": "15.7.5",
     "@types/react": "16.14.24",
     "cross-env": "7.0.3",
     "enzyme": "3.11.0",
