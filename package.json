@@ -57,12 +57,14 @@
     "enzyme-to-json": "3.6.2",
     "highlight.js": "11.6.0",
     "jest-snapshot": "29.3.1",
+    "jsdom": "^20.0.2",
+    "jsdom-global": "^3.0.2",
     "npm-run-all": "4.1.5",
     "react": "16.14.0",
     "react-dom": "16.14.0",
     "rimraf": "3.0.2",
-    "spire": "3.2.3",
-    "spire-plugin-semantic-release": "3.2.3",
+    "spire": "5.0.4",
+    "spire-plugin-semantic-release": "5.0.1",
     "typescript": "4.8.4"
   },
   "dependencies": {
@@ -81,7 +83,8 @@
     ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
-    ]
+    ],
+    "testEnvironment": "jsdom"
   },
   "spire": {
     "extends": [
