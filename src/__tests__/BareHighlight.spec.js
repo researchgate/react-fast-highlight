@@ -60,7 +60,7 @@ test('one language - calls correct highlightCall', (done) => {
     setTimeout(() => {
         expect(wrapper.state('language')).toBe('js');
         expect(wrapper.state('highlightedCode')).toBe('othertest');
-        expect(hljs.highlight).toHaveBeenCalledWith('js', 'test');
+        expect(hljs.highlight).toHaveBeenCalledWith("test", { "language": "js" });
         expect(hljs.highlight).toHaveBeenCalledTimes(1);
 
         done();
